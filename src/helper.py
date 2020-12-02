@@ -96,7 +96,7 @@ class data_handle():
             if not h:
                 img = img_scaled.flatten()
                 # WEIRD ERROR HERE WHERE IMG NOT SCALING ON CERTAIN IMAGES SO HARD DELETE
-                if(img.shape[0] == 512*512):
+                if(img.shape[0] == (resize**2)*4):
                     del_list.append(x)
                     continue
                 img = img.reshape((1, img.shape[0]))
